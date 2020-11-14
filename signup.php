@@ -32,7 +32,9 @@
     border-radius: 30px;
   }
 </style>
-<body>
+<body style="background-image: url('images/bg1.jpg'); background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
 <div class="row">
     <div class="col-sm-12">
       <div class="well">
@@ -56,7 +58,7 @@
                     </div><br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"> </i></span>
-                        <input type="text" class="form-control" placeholder="First Name" name="last_name" required="required">
+                        <input type="text" class="form-control" placeholder="Last Name" name="last_name" required="required">
                     </div><br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"> </i></span>
@@ -94,7 +96,7 @@
                     </div><br>
                     <a style="text-decoration: none; float:right; color:#187FAB; "  data-toggle="tooltip"  title="Signin" href="signin.php">Already Have an account?</a><br><br>
                     <center> <button id="signup" class="btn btn-info btn-lg" name="sign_up"> Signup </button></center>
-                    <!---<?php include("insert_user.php");?>-->
+                    <?php include("insert_user.php");?>
                 </form>
             </div>
         </div>

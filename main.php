@@ -57,7 +57,9 @@
   }
   
 </style>
-  <body>
+  <body style="background-image: url('images/mainbg.jpg'); background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
   <div class="row">
     <div class="col-sm-12">
       <div class="well">
