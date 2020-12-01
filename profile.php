@@ -25,7 +25,7 @@ if(!isset($_SESSION['user_email'])){
     <link rel="stylesheet" type="text/css" href="style/home_style2.css">
   </head>
   <style>
-   
+
 
     #cover-img{
       height: 400px;
@@ -88,7 +88,7 @@ if(!isset($_SESSION['user_email'])){
                   </div>
                 </li>
               </ul>
-              
+
 
             </form
           </div>
@@ -134,7 +134,7 @@ if(!isset($_SESSION['user_email'])){
                   $u_image= $_FILES['u_image']['name'];
                   $image_tmp=$_FILES['u_image']['tmp_name'];
                   $random_number=rand(1,100);
-    
+
                   if($u_image==''){
                     echo "<script>alert('Please Select Profile Image')</script>";
                     echo "<script>window.open('profile.php?u_id=$user_id', '_self')</script>";
@@ -143,9 +143,9 @@ if(!isset($_SESSION['user_email'])){
                   else{
                     move_uploaded_file($image_tmp,"users/$u_image.$random_number");
                     $update= "update users set user_image='$u_image.$random_number' where user_id='$user_id'";
-    
+
                     $run=mysqli_query($con,$update);
-    
+
                     if($run){
                       echo "<script>alert('Your Profile Image Updated')</script>";
                       echo "<script>window.open('profile.php?u_id=$user_id', '_self')</script>";
@@ -275,11 +275,11 @@ if(!isset($_SESSION['user_email'])){
 
                       <div class='col-sm-6'>
                       <h3><p>$content</p></h3>
-                      
+
                       </div>
                     <div class='col-sm-4'>
                     </div>
-                    
+
                   </div>
                 ";
 
@@ -320,10 +320,14 @@ if(!isset($_SESSION['user_email'])){
 
                 }
               }
+              include("functions/delete_post.php");
             }
 
           ?>
-       
+
+      </div>
+      <div class='col-sm-2'>
+
       </div>
     </div>
   </body>
