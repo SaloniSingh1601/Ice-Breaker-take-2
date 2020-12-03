@@ -48,7 +48,7 @@ include("functions/functions.php");
            <a href='home.php'>Home</a>
          </li>
          <li>
-           <a href='home.php'>Find People</a>
+           <a href='members.php'>Find People</a>
          </li>
          <li>
            <a href='messages.php?u_id=new'>Messages</a>
