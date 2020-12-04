@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_email'])){
 ?>
 <html>
   <head>
-    
+
     <title>Edit Account Settings</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,7 +92,7 @@ if(!isset($_SESSION['user_email'])){
                                <option>China</option>
                                <option>UK</option>
                                <option>other</option>
-                               
+
                                </select>
                             </td>
                         </tr>
@@ -104,7 +104,7 @@ if(!isset($_SESSION['user_email'])){
                                <option>Male</option>
                                <option>Female</option>
                                <option>other</option>
-                               
+
                                </select>
                             </td>
                         </tr>
@@ -135,6 +135,31 @@ if(!isset($_SESSION['user_email'])){
                                             <pre>Answer the above question we will ask this question if you forgot your <br>password.</pre>
                                             <br><br>
                                             </form>
+                                            <?php
+                                              if(isset($_POST['sub'])){
+                                                $bfn = htmlentities($_POST['content']);
+
+                                                if($bfn == ''){
+                                                  echo "<script>alert('please enter something')</script>";
+                                                  echo "<script>window.open('edit_profile.php?u_id$user_id','_self')</script>";
+
+                                                  exit();
+                                                }
+                                                else{
+                                                  $update = "update users set recovery_account='$bfn' where user_id='$user_id'";
+                                                  $run = mysqli_query($con, $update);
+
+                                                  if($run){
+                                                    echo "<script>alert('Working...')</script>";
+                                                    echo "<script>window.open('edit_profile.php?u_id$user_id','_self')</script>";
+                                                  }
+                                                  else{
+                                                    echo "<script>alert('Error while Updating Information')</script>";
+                                                    echo "<script>window.open('edit_profile.php?u_id$user_id','_self')</script>";
+                                                  }
+                                                }
+                                              }
+                                             ?>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -147,8 +172,8 @@ if(!isset($_SESSION['user_email'])){
 
                         <tr align="center">
                             <td colspan="6">
-                            
-                            <input type="submit"  class="btn btn-info" name="update" style="width:250px;" value="Update"> 
+
+                            <input type="submit"  class="btn btn-info" name="update" style="width:250px;" value="Update">
                             </td>
                         </tr>
                     </table>
@@ -159,3 +184,26 @@ if(!isset($_SESSION['user_email'])){
       </div>
   </body>
   </html>
+  <?php
+    if(isset($_POST['update'])){
+       $f_name = htmlentities($_POST['f_name']);
+       $l_name = htmlentities($_POST['l_name']);
+       $u_name = htmlentities($_POST['u_name']);
+       $describe_user = htmlentities($_POST['describe_user']);
+       $Relationship_status = htmlentities($_POST['Relationship']);
+       $u_pass = htmlentities($_POST['u_pass']);
+       $u_email = htmlentities($_POST['u_email']);
+       $u_country = htmlentities($_POST['u_country']);
+       $u_gender = htmlentities($_POST['u_gender']);
+       $u_birthday = htmlentities($_POST['u_birthday']);
+
+       $update = "update users set f_name='$f_name', l_name='$l_name', user_name='$u_name', describe_user='$describe_user', Relationship='$Relationship_status', user_pass='$u_pass', user_email='$u_email', user_country='$u_country', user_gender='$u_gender', user_birthday='$u_birthday' where user_id='$user_id'";
+
+       $run = mysqli_query($con, $update);
+
+       if($run){
+         echo "<script>alert('Your Profile Updated')</script>";
+         echo "<script>window.open('edit_profile.php?u_id$user_id','_self')</script>";
+       }
+    }
+   ?>
