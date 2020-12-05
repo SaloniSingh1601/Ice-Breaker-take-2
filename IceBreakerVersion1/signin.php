@@ -44,7 +44,7 @@
         letter-spacing: -1px;
     }
 </style>
-<body style="background-image: url('images/login.jpg'); background-repeat: no-repeat;
+<body style="background-image: url('images/bg1.jpg'); background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;">
 <div class="row">

@@ -72,20 +72,11 @@
   <div class="row">
     <div class="col-sm-6" style="left:0.5%;">
       <img src="images/logo.jpg" class="img-rounded" title="Ice-Breaker" width="650px" height="465px">
-      <div id="centered1" class="centered"><h3 style="color:black;"><span class="glyphicon glyphicon-search"></span>&nbsp&nbsp <strong>Follow Your interests</strong> </h3>
-
-      </div>
-      <div id="centered2" class="centered"><h3 style="color:black;"><span class="glyphicon glyphicon-search"></span>&nbsp&nbsp <strong>Lorem ipsum</strong> </h3>
-
-      </div>
-      <div id="centered3" class="centered"><h3 style="color:black;"><span class="glyphicon glyphicon-search"></span>&nbsp&nbsp <strong>Lorem ipsum</strong> </h3>
-
-      </div>
     </div>
     <div class="col-sm-6" style="left:8%">
-      <img src="images/logo.jpg" class="img-rounded" title="Ice-Breaker" width="80px" height="65px"> <!--logo-->
-      <h2> <strong>See what's trending </strong> </h2> <br> <br>
-        <h4> <strong>Join Now! </strong> </h4>
+      <!--img src="images/logo.jpg" class="img-rounded" title="Ice-Breaker" width="80px" height="65px"--> <!--logo-->
+      <h2 style="color:white;"> <strong>See what's trending </strong> </h2>
+        <h4 style="color:white;"> <strong>Join Now! </strong> </h4>
         <form action="" method="post">
           <button id="signup" class="btn btn-info btn-lg" name="signup">Signup</button> <br> <br>
           <?php
