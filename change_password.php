@@ -81,7 +81,7 @@ if(!isset($_SESSION['user_email'])){
   <?php
       if(isset($_POST['change'])){
 
-        $user = $SESSION['user_email'];
+        $user = $_SESSION['user_email'];
         $get_user = "select * from users where user_email='$user'";
         $run_user = mysqli_query($con, $get_user);
         $row = mysqli_fetch_array($run_user);
@@ -93,7 +93,7 @@ if(!isset($_SESSION['user_email'])){
 
         if($pass == $pass1){
             if(strlen($pass) >= 6 && strlen($pass) <= 60){
-                $update = "update users set user_pass='$pass' where user_id='$user_id'";
+                $update = "UPDATE users SET user_pass='$pass' WHERE user_id='$user_id'";
 
                 $run = mysqli_query($con, $update);
                 echo "<script>alert('Your password changed a moment ago')</script>";

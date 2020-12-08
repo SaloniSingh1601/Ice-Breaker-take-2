@@ -22,13 +22,16 @@ if(!isset($_SESSION['user_email'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/home_style2.css">
+    
   </head>
   <body>
+  
+
       <div class="row">
         <div id="insert_post" class="col-sm-12">
             <center>
                 <form action="home.php?id=<?php echo $user_id;?>" method="post" id="f" enctype="multipart/form-data">
-                    <textarea class="form-control" name="content" id="content" rows="4" placeholder="Whta's up cool guys?"></textarea><br>
+                    <textarea class="form-control" name="content" id="content" rows="4" placeholder="What's up cool penguins?"></textarea><br>
                     <label class="btn btn-warning" id="upload_image_button">Select Image
                     <input type="file" name="upload_image" size="30">
                     </label>

@@ -19,7 +19,7 @@ function insertPost(){
             echo "<script>window.open('home.php','_self')</script>";
         }else{
             if(strlen($upload_image) >= 1 and strlen($content) >= 1){
-                move_uploaded_file($img_temp,"../imagepost/$upload_image.$random_number");
+                move_uploaded_file($image_tmp,"imagepost/$upload_image.$random_number");
                 $insert = "insert into posts (user_id,post_content,upload_image,post_date)
                 values ('$user_id','$content','$upload_image.$random_number',NOW())";
 
@@ -40,7 +40,7 @@ function insertPost(){
                     echo "<script>window.open('home.php','_self')</script>";
                 }else{
                     if($content==''){
-                        move_uploaded_file($img_temp,"../imagepost/$upload_image.$random_number");
+                        move_uploaded_file($image_tmp,"imagepost/$upload_image.$random_number");
                     $insert = "insert into posts (user_id,post_content,upload_image,post_date)
                     values ('$user_id','$content','$upload_image.$random_number',NOW())";
 
@@ -109,7 +109,7 @@ function get_posts(){
 
         //now displaying posts from database
 
-        if($content=="No" && strlen($upload_image) >=1 ){
+        if($content=="" && strlen($upload_image) >=1 ){
             echo "
             <div class='row'>
                <div class='col-sm-3'>
@@ -128,7 +128,7 @@ function get_posts(){
                     </div>
                     <div class='row'>
                         <div class='col-sm-12'>
-                            <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                            <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                         </div>
                     </div><br>
                     <a href='single.php?post_id= $post_id' style='float:right; '><button
@@ -159,7 +159,7 @@ function get_posts(){
                     <div class='row'>
                         <div class='col-sm-12'>
                             <p>$content</p>
-                            <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                            <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                         </div>
                     </div><br>
                     <a href='single.php?post_id= $post_id' style='float:right; '><button
@@ -258,7 +258,7 @@ function get_posts(){
           echo "<script>window.open('home.php','_self')</script>";
         }
         else {
-          if($content=="No" && strlen($upload_image) >=1 ){
+          if($content=="" && strlen($upload_image) >=1 ){
               echo "
               <div class='row'>
                  <div class='col-sm-3'>
@@ -277,7 +277,7 @@ function get_posts(){
                       </div>
                       <div class='row'>
                           <div class='col-sm-12'>
-                              <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                              <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                           </div>
                       </div><br>
                  </div>
@@ -306,7 +306,7 @@ function get_posts(){
                       <div class='row'>
                           <div class='col-sm-12'>
                               <p>$content</p>
-                              <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                              <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                           </div>
                       </div><br>
                  </div>
@@ -426,7 +426,7 @@ function get_posts(){
             echo "<script>window.open('my_post.php?u_id=$user_id','_self')</script>";
           }
           else{
-            if($content=="No" && strlen($upload_image) >=1 ){
+            if($content=="" && strlen($upload_image) >=1 ){
                 echo "
                 <div class='row'>
                    <div class='col-sm-3'>
@@ -445,7 +445,7 @@ function get_posts(){
                         </div>
                         <div class='row'>
                             <div class='col-sm-12'>
-                                <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                                <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                             </div>
                         </div><br>
                    </div>
@@ -474,7 +474,7 @@ function get_posts(){
                         <div class='row'>
                             <div class='col-sm-12'>
                                 <p>$content</p>
-                                <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                                <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                             </div>
                         </div><br>
                    </div>
@@ -544,7 +544,7 @@ function get_posts(){
             $user_image = $row_user['user_image'];
 
             //displaying posts
-            if($content=="No" && strlen($upload_image) >=1 ){
+            if($content=="" && strlen($upload_image) >=1 ){
                 echo "
                 <div class='row'>
                    <div class='col-sm-3'>
@@ -563,7 +563,7 @@ function get_posts(){
                         </div>
                         <div class='row'>
                             <div class='col-sm-12'>
-                                <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                                <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                             </div>
                         </div><br>
                    </div>
@@ -592,7 +592,7 @@ function get_posts(){
                         <div class='row'>
                             <div class='col-sm-12'>
                                 <p>$content</p>
-                                <img id='posts-img' src='../imagepost/$upload_image' style='height:350px;'>
+                                <img id='posts-img' src='imagepost/$upload_image' style='height:350px;'>
                             </div>
                         </div><br>
                    </div>

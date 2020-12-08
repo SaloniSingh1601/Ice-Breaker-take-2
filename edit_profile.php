@@ -131,7 +131,7 @@ if(!isset($_SESSION['user_email'])){
                                             <form action="recovery.php?id=<?php echo $user_id; ?>" method="post" id="f">
                                             <strong>What is your School Best Friends Name?</strong>
                                             <textarea class="form-control" cols="83" rows="4" name="content" placeholder="Someone"></textarea><br>
-                                            <input class="btn btn-default" type="submit" name="sub" value="Sumbit" style="width:100px;"><br><br>
+                                            <input class="btn btn-default" type="submit" name="sub" value="Submit" style="width:100px;"><br><br>
                                             <pre>Answer the above question we will ask this question if you forgot your <br>password.</pre>
                                             <br><br>
                                             </form>

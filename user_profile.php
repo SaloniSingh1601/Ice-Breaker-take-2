@@ -141,7 +141,7 @@ if(!isset($_SESSION['user_email'])){
                     $l_name = $row_user['l_name'];
                     $user_image = $row_user['user_image'];
 
-                    if($content=="No" && strlen($upload_image) >=1 ){
+                    if($content=="" && strlen($upload_image) >=1 ){
                         echo"
                         <div id='own_posts'>
                             <div class='row'>
