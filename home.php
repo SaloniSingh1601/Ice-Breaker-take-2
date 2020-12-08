@@ -16,6 +16,13 @@ if(!isset($_SESSION['user_email'])){
     $user_name = $row['user_name'];
     ?>
     <title><?php echo "$user_name"; ?></title>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1%22%3E"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="FAQ"
+  agent-id="532fffee-2e94-44d9-9b38-29abb0aaf12d"
+  language-code="en"
+></df-messenger>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

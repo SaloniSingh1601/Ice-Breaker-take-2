@@ -60,6 +60,7 @@ if(!isset($_SESSION['user_email'])){
   <body>
     <div class="row">
         <?php
+        error_reporting( error_reporting() & ~E_NOTICE );
             if(isset($_GET['u_id'])){
                 global $con ;
 
