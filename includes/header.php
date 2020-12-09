@@ -2,7 +2,7 @@
 include("includes/connection.php");
 include("functions/functions.php");
 ?>
-<nav class="navbar navbar-default">
+<nav class="navbar bg-dark" style='background-color:#00204a;'>
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" aria-expanded="false">

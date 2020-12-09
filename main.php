@@ -53,9 +53,9 @@
     border-radius: 30px;
   }
   .well{
-    background-color: #187FAB;
+    background-color: #005792;
   }
-  
+
 </style>
   <body style="background-image: url('images/mainbg.jpg'); background-repeat: no-repeat;
   background-attachment: fixed;
